@@ -59,7 +59,7 @@ Perl's not on a hype cycle right now, so you can snag all of its best books for 
 
 ### Getting Help
 
-There are active communities on [Discord](https://discord.com/invite/Mnbj6th) and [Reddit](https://reddit.com/r/perl/). For IRC the two main options are #perl on FreeNode #perl (irc.freenode.net) and #perl-help on [irc.perl.org](https://www.irc.perl.org/). Everyone is really friendly and helpful, so don't hesitate to swing by. If you need an IRC program to connect with try [HexChat](https://hexchat.github.io/) for Linux/Windows or [LimeChat](http://limechat.net/mac/) for Mac. You can also ask a question on [StackOverflow](https://stackoverflow.com/questions/tagged/perl), or check the [Perl FAQ](https://perldoc.pl/perlfaq).
+There are active communities on [Discord](https://discord.com/invite/Mnbj6th) and [Reddit](https://reddit.com/r/perl/). For IRC the two main options are #perl on FreeNode (irc.freenode.net) and #perl-help on [irc.perl.org](https://www.irc.perl.org/). Everyone is really friendly and helpful, so don't hesitate to swing by. If you need an IRC program to connect with try [HexChat](https://hexchat.github.io/) for Linux/Windows or [LimeChat](http://limechat.net/mac/) for Mac. You can also ask a question on [StackOverflow](https://stackoverflow.com/questions/tagged/perl), or check the [Perl FAQ](https://perldoc.pl/perlfaq).
 
 ### Keeping Up to Date
 
@@ -87,8 +87,9 @@ There are active communities on [Discord](https://discord.com/invite/Mnbj6th) an
 Follow the post-install instructions at the prompt to add `source ~/perl5/perlbrew/etc/bashrc` to your `~/.bash_profile` or `~/.zshrc`. Then run:
 
 ```bash
-perlbrew available
-perlbrew install perl-5.xx.x #replace with latest version shown
+perlbrew available #list available versions
+perlbrew install perl-5.32.0 #install latest version
+perlbrew switch perl-5.32.0 #use as system default
 ```
 
 Then run `perlbrew init`, and `perl --version` to make sure you are running the latest version.
