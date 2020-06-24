@@ -19,7 +19,8 @@ Perl has unique security features like ["taint checking"](https://en.wikipedia.o
 - [Setting up a Development Environment](#setting-up-a-development-environment)
   - [IDE](#ide)
   - [Perl Version Manager](#perl-version-manager)
-  - [Package Manager](#package-manager)
+  - [Module Installer](#module-installer)
+  - [Dependencies Manager](#package-manager)
   - [REPL](#repl)
 - [Building Software](#building-software)
   - [Finding Modules](#finding-modules)
@@ -94,10 +95,10 @@ If the latest Perl version does not show up, double-check the plenv install inst
 You can install Perl modules with [cpanminus](https://github.com/miyagawa/cpanminus). To set it up run:
 
 ```bash
-curl -L https://cpanmin.us | perl - App::cpanminus
+plenv install-cpanm
 ```
 
-### Module Dependencies Manager
+### Dependencies Manager
 
 Module dependencies in Perl are managed with [Carton](https://metacpan.org/pod/Carton). This is equivalent to pyenv in Python, Bundler in Ruby, or NPM in JavaScript. To install it run:
 
@@ -126,7 +127,7 @@ There are almost 200k Perl modules on CPAN, which is easily searchable from [met
 ### Equivalents from Other Languages
 
 - **Web app interface** - [Plack](https://plackperl.org/) - like WSGI (Python), or Rack (Ruby)
-- **Version manager** - [Perlbrew](https://perlbrew.pl/) - like perlenv (Python), rbenv (Ruby), or nvm (JavaScript)
+- **Version manager** - [plenv](https://github.com/tokuhirom/plenv) - like perlenv (Python), rbenv (Ruby), or nvm (JavaScript)
 - **Dependency manager** - [Carton](https://metacpan.org/pod/Carton) - like Poetry (Python), Bundler (Ruby), or NPM (JavaScript)
 - **Lightweight web framework** - [Dancer](http://perldancer.org/) - like Flask (Python), Sinatra (Ruby), or Express (JavaScript)
 - **MVC web framework** - [Catalyst](http://www.catalystframework.org/) - like Django (Python), Rails (Ruby), or Nest (JavaScript)
