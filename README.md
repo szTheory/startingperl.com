@@ -72,10 +72,23 @@ There are active communities on [Discord](https://discord.com/invite/Mnbj6th) an
 
 [Visual Studio Code](https://code.visualstudio.com/) makes for a great modern Perl IDE. Here are the main extensions that will make your life easier.
 
-- [Perl](https://marketplace.visualstudio.com/items?itemName=richterger.perl) - Language server and debugger. Has syntax checking, code completion, goto definition, and find references.
-- [perltidy-more](https://marketplace.visualstudio.com/items?itemName=Kaktus.perltidy-more) - Automatic code formatter.
-- [Perl Toolbox](https://marketplace.visualstudio.com/items?itemName=d9705996.perl-toolbox) - Static analysis tool with linting provided by [Perlcritic](https://github.com/Perl-Critic/Perl-Critic).
-- [Better Perl Syntax](https://marketplace.visualstudio.com/items?itemName=jeff-hykin.better-perl-syntax) - Great syntax highlighting.
+- [Perl](https://marketplace.visualstudio.com/items?itemName=richterger.perl) - Language server and debugger, with syntax checking, code completion, goto definition, and find references. Requires install of `Perl::LanguageServer` module.
+
+```bash
+cpanm Perl::LanguageServer #Run this after installing the extension
+```
+
+- [Perl Toolbox](https://marketplace.visualstudio.com/items?itemName=d9705996.perl-toolbox) - Static analysis tool with linting provided by [Perlcritic](https://github.com/Perl-Critic/Perl-Critic). Requires install of `Perl::Critic` module.
+
+```bash
+cpanm Perl::Critic #Run this after installing the extension
+```
+
+- [perltidy-more](https://marketplace.visualstudio.com/items?itemName=Kaktus.perltidy-more) - Automatic code formatter. Requires install of `Perl::Tidy` module.
+
+```bash
+cpanm Perl::Tidy #Run this after installing the extension
+```
 
 ### Perl version manager
 
