@@ -78,7 +78,7 @@ There are active communities on [Discord](https://discord.com/invite/Mnbj6th) an
 
 ### Perl version manager
 
-[Perlbrew](https://perlbrew.pl/) let's you have multiple Perl versioned installed at once, and keep their CPAN packages separate. This way you can use a different Perl for different projects withoug them interfering with each other. These are equivalent to Python's [pyenv](https://github.com/pyenv/pyenv), Ruby's [rbenv](https://github.com/rbenv/rbenv), Node's [nvm](https://github.com/nvm-sh/nvm), or the multi-language [asdf-vm](https://asdf-vm.com/). To install run:
+[Perlbrew](https://perlbrew.pl/) let's you have multiple Perl versioned installed at once, and keep their CPAN packages separate. This way you can use a different Perl for different projects without them interfering with each other. These are equivalent to Python's [pyenv](https://github.com/pyenv/pyenv), Ruby's [rbenv](https://github.com/rbenv/rbenv), Node's [nvm](https://github.com/nvm-sh/nvm), or the multi-language [asdf-vm](https://asdf-vm.com/). To install run:
 
 ```bash
 \curl -L https://install.perlbrew.pl | bash
