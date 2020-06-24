@@ -78,28 +78,23 @@ There are active communities on [Discord](https://discord.com/invite/Mnbj6th) an
 
 ### Perl version manager
 
-[Perlbrew](https://perlbrew.pl/) let's you have multiple Perl versioned installed at once, and keep their CPAN packages separate. This way you can use a different Perl for different projects without them interfering with each other. It's equivalent to Python's [pyenv](https://github.com/pyenv/pyenv), Ruby's [rbenv](https://github.com/rbenv/rbenv), Node's [nvm](https://github.com/nvm-sh/nvm), or the multi-language [asdf-vm](https://asdf-vm.com/). To install run:
+[plenv](https://github.com/tokuhirom/plenv) let's you have multiple Perl versioned installed at once, and keep their CPAN packages separate. This way you can use a different Perl for different projects without them interfering with each other or the system installed `perl`. It's equivalent to Python's [pyenv](https://github.com/pyenv/pyenv), Ruby's [rbenv](https://github.com/rbenv/rbenv), Node's [nvm](https://github.com/nvm-sh/nvm), or the multi-language [asdf-vm](https://asdf-vm.com/). Simply [follow the instructions here](https://github.com/tokuhirom/plenv#installation) to install plenv, then run the following commands to install Perl:
 
 ```bash
-\curl -L https://install.perlbrew.pl | bash
+plenv install --list #List available versions
+plenv install 5.32.0 #Install latest version
+plenv global 5.32.0 #Use as default Perl
+perl --version #Confirm latest version is installed properly
 ```
 
-Follow the post-install instructions at the prompt to add `source ~/perl5/perlbrew/etc/bashrc` to your `~/.bash_profile` or `~/.zshrc`. Then run:
-
-```bash
-perlbrew available #list available versions
-perlbrew install perl-5.32.0 #install latest version
-perlbrew switch perl-5.32.0 #use as system default
-```
-
-Then run `perlbrew init`, and `perl --version` to make sure you are running the latest version.
+If the latest Perl version does not show up, double-check the plenv install instructions and make sure you've run `source ~/.bash_profile` or `source ~/.zshrc`
 
 ### Module Installer
 
 You can install Perl modules with [cpanminus](https://github.com/miyagawa/cpanminus). To set it up run:
 
 ```bash
-perlbrew install-cpanm
+curl -L https://cpanmin.us | perl - App::cpanminus
 ```
 
 ### Module Dependencies Manager
