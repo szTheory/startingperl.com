@@ -36,7 +36,7 @@ With [Exercism.io's Perl track](https://exercism.io/my/tracks/perl5) you get fre
 
 ### Docs
 
-You can view the [language](https://perldoc.perl.org/perl.html), [functions](https://perldoc.pl/functions), and [core modules](https://perldoc.pl/modules) documentation online, or simply add the Perl docset to one of these apps for instant search results.
+You can view the [language](https://perldoc.perl.org/perl.html), [functions](https://perldoc.pl/functions), and [core modules](https://perldoc.pl/modules) documentation online, or simply add the Perl docset to one of these apps for instant search results as you type.
 
 - [devdocs.io](https://devdocs.io) - free web app
 - [Zeal](https://zealdocs.org/) - free desktop app
@@ -44,7 +44,7 @@ You can view the [language](https://perldoc.perl.org/perl.html), [functions](htt
 
 ### Books
 
-Perl's not on a hype cycle right now, so you can snag all of its best books for bargain prices. And because Perl is a really stable language, the're still relevant. A lot of these books are even free online. But paper books have great information density, you can quickly look things up with their index, and they help you get away from the computer screen for a bit.
+Perl's not on a hype cycle right now, so you can snag its best books for bargain prices. And because Perl is an incredibly stable language, they're still relevant. A lot of these books are even free online. But paper books have great information density, you can quickly look things up with their index, and they help you get away from the computer screen for a bit.
 
 - [Beginning Perl](https://www.goodreads.com/book/show/13837737-beginning-perl) - A comprehensive reference and modern introduction to Perl.
 
