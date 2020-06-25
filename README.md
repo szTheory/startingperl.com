@@ -91,7 +91,7 @@ plenv install-cpanm #Install cpanm
 
 ### Dependencies Manager
 
-Module dependencies in Perl are managed with [Carton](https://metacpan.org/pod/Carton). It lets you list out the modules your project depends on with a [`cpanfile`](https://metacpan.org/pod/cpanfile), then you can run `carton install` to install them. This is equivalent to pyenv for Python, Bundler for Ruby, or NPM for JavaScript. To install it run:
+Module dependencies in Perl are managed with [Carton](https://metacpan.org/pod/Carton). It lets you list your project dependencies with a [`cpanfile`](https://metacpan.org/pod/cpanfile), then you can run `carton install` to install them. This is equivalent to pyenv for Python, Bundler for Ruby, or NPM for JavaScript. To install it run:
 
 ```bash
 cpanm Carton #Install Carton
