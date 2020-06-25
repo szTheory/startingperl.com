@@ -17,18 +17,18 @@ Perl has unique security features like ["taint checking"](https://en.wikipedia.o
   - [Getting Help](#getting-help)
   - [Keeping Up to Date](#keeping-up-to-date)
 - [Setting up a Development Environment](#setting-up-a-development-environment)
-  - [IDE](#ide)
   - [Perl Version Manager](#perl-version-manager)
   - [Module Installer](#module-installer)
   - [Dependencies Manager](#package-manager)
   - [REPL](#repl)
+  - [IDE](#ide)
 - [Building Software](#building-software)
   - [Finding Modules](#finding-modules)
   - [Equivalents from Other Languages](#equivalents-from-other-languages)
 
 ## Learning Perl
 
-If you just want a quick introduction to Perl, check out [this guide](https://perldoc.perl.org/perlintro.html) or [this video](https://www.youtube.com/watch?v=WEghIXs8F6c) (watch at 2x speed to save time). The rest of this section will cover how to get beyond introductions and become a successful Perl programmer.
+If you just want a quick introduction to Perl, check out [this guide](https://perldoc.perl.org/perlintro.html), [this cheat sheet](https://learnxinyminutes.com/docs/perl/), or [this video](https://www.youtube.com/watch?v=WEghIXs8F6c) (watch at 2x speed to save time). The rest of this section will cover how to get beyond introductions and become a successful Perl programmer.
 
 ### Guided Learning
 
@@ -68,28 +68,6 @@ There are active communities on [Discord](https://discord.com/invite/Mnbj6th) an
 
 ## Setting up a Development Environment
 
-### IDE
-
-[Visual Studio Code](https://code.visualstudio.com/) makes for a great modern Perl IDE. Here are the main extensions that will make your life easier.
-
-- [Perl](https://marketplace.visualstudio.com/items?itemName=richterger.perl) - Language server and debugger, with syntax checking, code completion, goto definition, and find references. Requires install of `Perl::LanguageServer` module.
-
-```bash
-cpanm Perl::LanguageServer #Run this after installing the extension
-```
-
-- [Perl Toolbox](https://marketplace.visualstudio.com/items?itemName=d9705996.perl-toolbox) - Static analysis tool with linting provided by [Perlcritic](https://github.com/Perl-Critic/Perl-Critic). Requires install of `Perl::Critic` module.
-
-```bash
-cpanm Perl::Critic #Run this after installing the extension
-```
-
-- [perltidy-more](https://marketplace.visualstudio.com/items?itemName=Kaktus.perltidy-more) - Automatic code formatter. Requires install of `Perl::Tidy` module.
-
-```bash
-cpanm Perl::Tidy #Run this after installing the extension
-```
-
 ### Perl version manager
 
 [plenv](https://github.com/tokuhirom/plenv) let's you have multiple Perl versioned installed at once, and keep their CPAN packages separate. This way you can use a different Perl for different projects without them interfering with each other or the system installed `perl`. It's equivalent to Python's [pyenv](https://github.com/pyenv/pyenv), Ruby's [rbenv](https://github.com/rbenv/rbenv), Node's [nvm](https://github.com/nvm-sh/nvm), or the multi-language [asdf-vm](https://asdf-vm.com/). Simply [follow the instructions here](https://github.com/tokuhirom/plenv#installation) to install plenv, then run the following commands to install Perl:
@@ -117,7 +95,7 @@ Module dependencies in Perl are managed with [Carton](https://metacpan.org/pod/C
 
 ```bash
 cpanm Carton #Install Carton
-plenv rehash #Set up "shim" shortcut to Carton
+plenv rehash #Set up "shim" shortcut
 carton install #Install module deps for project from the cpanfile
 ```
 
@@ -127,8 +105,50 @@ To install a Perl REPL run this command:
 
 ```bash
 cpanm Reply #Install Reply REPL
-plenv rehash #Set up "shim" shortcut to Reply
+cpanm Term::ReadLine::Gnu #Enable up/down arrow keys for command history
+plenv rehash #Set up "shim" shortcut
 reply #Enter the REPL
+```
+
+### IDE
+
+[Visual Studio Code](https://code.visualstudio.com/) makes for a great modern Perl IDE. Here are the main extensions that will make your life easier.
+
+#### Language Server
+
+The [Perl](https://marketplace.visualstudio.com/items?itemName=richterger.perl) extension is a language server and debugger, with syntax checking, code completion, goto definition, and find references. Requires install of Perl::LanguageServer module.
+
+```bash
+cpanm Perl::LanguageServer #Install Perl::LanguageServer
+plenv rehash #Set up "shim" shortcut
+```
+
+#### Linter/Static Analysis
+
+The [Perl Toolbox](https://marketplace.visualstudio.com/items?itemName=d9705996.perl-toolbox) extension provides static analysis with the [Perlcritic](https://github.com/Perl-Critic/Perl-Critic) linter. Requires install of Perl::Critic module.
+
+```bash
+cpanm Perl::Critic #Install Perl::Critic
+cpanm Perl::Critic::Freenode #Install a better linter theme
+plenv rehash #Set up "shim" shortcut
+```
+
+After running these commands, Create a `~/.perlcriticrc` file and add the following to use the improved Perl::Critic::Freenode policy theme.
+
+```.perlcriticrc
+theme = freenode
+severity = 1
+```
+
+Then open the Visual Studio Code preferences and set `perl-toolbox.lint.useProfile` to `true`. You can do this by manually editing your settings.json file, or going to Settings (`ctrl/cmd + ,`), searching for `perl-toolbox.lint.useProfile`, and clicking the check box.
+
+#### Code Formatter
+
+The [perltidy-more](https://marketplace.visualstudio.com/items?itemName=Kaktus.perltidy-more) extension provides automatic code formatting. Requires install of Perl::Tidy module.
+
+```bash
+cpanm Perl::Tidy #Install Perl::Tidy
+plenv rehash #Set up "shim" shortcut
 ```
 
 ### Finding Modules
