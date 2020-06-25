@@ -105,24 +105,20 @@ If the latest Perl version does not show up, double-check the plenv install inst
 
 ### Module Installer
 
-You can install Perl modules with [cpanminus](https://github.com/miyagawa/cpanminus). To set it up run:
+You can install Perl modules with [cpanminus](https://github.com/miyagawa/cpanminus). This lets you run `cpanm modulenamehere` to quickly install any module from CPAN. To set it up run:
 
 ```bash
-plenv install-cpanm
+plenv install-cpanm #Install cpanm
 ```
 
 ### Dependencies Manager
 
-Module dependencies in Perl are managed with [Carton](https://metacpan.org/pod/Carton). This is equivalent to pyenv in Python, Bundler in Ruby, or NPM in JavaScript. To install it run:
+Module dependencies in Perl are managed with [Carton](https://metacpan.org/pod/Carton). It lets you list out the modules your project depends on with a [`cpanfile`](https://metacpan.org/pod/cpanfile), then you can run `carton install` to install them. This is equivalent to pyenv for Python, Bundler for Ruby, or NPM for JavaScript. To install it run:
 
 ```bash
-cpanm Carton
-```
-
-Then you can install dependencies for any project using a [`cpanfile`](https://metacpan.org/pod/cpanfile) with:
-
-```bash
-carton install
+cpanm Carton #Install Carton
+plenv rehash #Set up "shim" shortcut to Carton
+carton install #Install module deps for project from the cpanfile
 ```
 
 ### REPL
@@ -130,7 +126,9 @@ carton install
 To install a Perl REPL run this command:
 
 ```bash
-cpanm App::perlsh
+cpanm App::perlsh #Install perlsh REPL
+plenv rehash #Set up "shim" shortcut to perlsh
+perlsh #Enter the REPL
 ```
 
 ### Finding Modules
