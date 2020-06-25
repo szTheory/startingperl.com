@@ -32,7 +32,7 @@ If you just want a quick introduction to Perl, check out [this guide](https://pe
 
 ### Guided Learning
 
-With [Exercism.io's Perl track](https://exercism.io/my/tracks/perl5) you get free training with mini projects of gradually increasing difficulty starting from Hello World. Each one comes with unit tests already set up, so all you have to do is make them pass. Unlike other programs you can use your own IDE (auto complete, code formatting, and static analysis are life savers), and you get personalized feedback from experienced mentors. This means that you will build good habits from the beginning, and always have someone to help if you get stuck.
+With [Exercism.io's Perl track](https://exercism.io/my/tracks/perl5) you get free training with mini projects of gradually increasing difficulty starting from Hello World. Each one comes with unit tests already set up, so all you have to do is make them pass. Unlike other websites you can use your own IDE with Exercism (auto complete, code formatting, and linting are life savers), and you get personalized feedback from experienced mentors. This means that you will build good habits from the start, and always have someone to help if you get stuck.
 
 ### Docs
 
