@@ -137,9 +137,14 @@ There are almost 200k Perl modules on CPAN, which is easily searchable from [met
 
 ### Equivalents from Other Languages
 
-- **Web app interface** - [Plack](https://plackperl.org/) - like WSGI (Python), or Rack (Ruby)
 - **Version manager** - [plenv](https://github.com/tokuhirom/plenv) - like perlenv (Python), rbenv (Ruby), or nvm (JavaScript)
 - **Dependency manager** - [Carton](https://metacpan.org/pod/Carton) - like Poetry (Python), Bundler (Ruby), or NPM (JavaScript)
+- **Linter** - [perlcritic](https://metacpan.org/pod/perlcritic) - like Pylint (Python), Rubocop (Ruby), or ESLint (JavaScript)
+- **Formatter** - [perltidy](https://metacpan.org/pod/perltidy) - like Black (Python), Standard (Ruby), or Prettier (JavaScript)
+- **Web app interface** - [Plack](https://plackperl.org/) - like WSGI (Python), or Rack (Ruby)
 - **Lightweight web framework** - [Dancer](http://perldancer.org/) - like Flask (Python), Sinatra (Ruby), or Express (JavaScript)
 - **MVC web framework** - [Catalyst](http://www.catalystframework.org/) - like Django (Python), Rails (Ruby), or Nest (JavaScript)
 - **Real-time web framework** - [Mojolicious](https://mojolicious.org/) - like Twisted (Python)
+- **ORM (Active Record pattern)** - [DBIx::Class](https://metacpan.org/pod/DBIx::Class) - like ActiveRecord (Ruby), Django ORM (Python)
+- **Web Scraping** - [WWW::Mechanize](https://metacpan.org/pod/WWW::Mechanize) - like Mechanize (Ruby), mechanize (Python)
+- **Browser Automation** - [WWW::Selenium](https://metacpan.org/pod/WWW::Selenium) - Like WebDriver (Ruby), Selenium (Python), Nightwatch.js (JavaScript), Nightwatch.js/Puppeteer (JavaScript)
