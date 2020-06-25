@@ -44,19 +44,19 @@ You can view the [language](https://perldoc.perl.org/perl.html), [functions](htt
 
 ### Books
 
-Perl's not on a hype cycle right now, so you can snag its best books for bargain prices. And because Perl is an incredibly stable language, they're still relevant. A lot of these books are even free online. But paper books have great information density, you can quickly look things up with their index, and they help you get away from the computer screen for a bit.
+Perl's not on a hype cycle right now, so you can snag its best books for bargain prices. And because Perl is an incredibly stable language, they're still relevant. A lot of these books are even free online. But paper books have great information density, you can quickly look things up from their index, and they help you get away from the computer screen for a bit.
 
 - [Beginning Perl](https://www.goodreads.com/book/show/13837737-beginning-perl) - A comprehensive reference and modern introduction to Perl.
 
-- [Effective Perl Programming, 2nd edition](https://www.goodreads.com/book/show/946128.Effective_Perl_Programming) - A list of expert tips that will have you quickly writing great Perl code. This is to Perl what the legendary "Effective C++" is to that language.
+- [Effective Perl Programming, 2nd edition](https://www.goodreads.com/book/show/946128.Effective_Perl_Programming) - A list of expert tips that will have you quickly writing great Perl code. This is to Perl what the legendary "Effective C++" is to C++.
 
-- [Modern Perl, 4th edition](https://www.goodreads.com/book/show/10198038-modern-perl) - A short book to quickly bring you up to speed on modern best practices Perl. Also available online [for free](http://modernperlbooks.com/books/modern_perl_2016/index.html).
+- [Modern Perl, 4th edition](https://www.goodreads.com/book/show/10198038-modern-perl) - A short book to quickly bring you up to speed on modern "best practices" Perl. Also available online [for free](http://modernperlbooks.com/books/modern_perl_2016/index.html).
 
 - [Programming Perl, 4th edition](https://www.goodreads.com/book/show/154155.Programming_Perl) - The official reference. It's a massive tome and you can get it for \$10.
 
 - [Higher Order Perl](https://www.goodreads.com/book/show/86365.Higher_Order_Perl) - A classic book on functional programming in Perl. More relevant than ever with the rise of multi-core CPUs. Also available online for [for free](https://hop.perl.plover.com/book/).
 
-- [Mastering Perl, 2nd edition](https://www.goodreads.com/book/show/583634.Mastering_Perl) - Advanced techniques for the working Perl programmer, like secure programming techniques, debugging, profiling, benchmarking, configuration, logging, and error reporting.
+- [Mastering Perl, 2nd edition](https://www.goodreads.com/book/show/583634.Mastering_Perl) - Advanced techniques for the working Perl programmer, like secure programming, debugging, profiling, benchmarking, configuration, logging, and error reporting.
 
 ### Getting Help
 
