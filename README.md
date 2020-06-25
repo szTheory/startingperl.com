@@ -126,9 +126,9 @@ carton install #Install module deps for project from the cpanfile
 To install a Perl REPL run this command:
 
 ```bash
-cpanm App::perlsh #Install perlsh REPL
-plenv rehash #Set up "shim" shortcut to perlsh
-perlsh #Enter the REPL
+cpanm Reply #Install Reply REPL
+plenv rehash #Set up "shim" shortcut to Reply
+reply #Enter the REPL
 ```
 
 ### Finding Modules
