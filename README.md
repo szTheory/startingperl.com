@@ -19,10 +19,10 @@ Perl has unique security features like ["taint checking"](https://en.wikipedia.o
 - [Setting up a Development Environment](#setting-up-a-development-environment)
   - [Perl Version Manager](#perl-version-manager)
   - [Module Installer](#module-installer)
-  - [Dependencies Manager](#package-manager)
+  - [Dependencies Manager](#dependencies-manager)
   - [REPL](#repl)
   - [IDE](#ide)
-- [Building Software](#building-software)
+- [Integrating with Third-Party Code](#integrating-with-third-party-code)
   - [Finding Modules](#finding-modules)
   - [Equivalents from Other Languages](#equivalents-from-other-languages)
 
@@ -68,7 +68,7 @@ There are active communities on [Discord](https://discord.com/invite/Mnbj6th) an
 
 ## Setting up a Development Environment
 
-### Perl version manager
+### Perl Version Manager
 
 [plenv](https://github.com/tokuhirom/plenv) let's you have multiple Perl versioned installed at once, and keep their CPAN packages separate. This way you can use a different Perl for different projects without them interfering with each other or the system installed `perl`. It's equivalent to Python's [pyenv](https://github.com/pyenv/pyenv), Ruby's [rbenv](https://github.com/rbenv/rbenv), Node's [nvm](https://github.com/nvm-sh/nvm), or the multi-language [asdf-vm](https://asdf-vm.com/). Simply [follow the instructions here](https://github.com/tokuhirom/plenv#installation) to install plenv, then run the following commands to install Perl:
 
@@ -151,9 +151,11 @@ cpanm Perl::Tidy #Install Perl::Tidy
 plenv rehash #Set up "shim" shortcut
 ```
 
+## Integrating with Third-Party Code
+
 ### Finding Modules
 
-There are almost 200k Perl modules on CPAN, which is easily searchable from [metacpan](https://metacpan.org/). If you are looking for something but don't know where to start, here is a [curated list of modules](https://metacpan.org/pod/Task::Kensho).
+A lot of hard problems have already been solved by the Perl community. There are almost 200k Perl modules on CPAN, which is easily searchable from [metacpan](https://metacpan.org/). If you are looking for something but don't know where to start, here is a [curated list of modules](https://metacpan.org/pod/Task::Kensho).
 
 ### Equivalents from Other Languages
 
