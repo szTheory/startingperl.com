@@ -60,7 +60,7 @@ Perl's not on a hype cycle right now, so you can snag its best books for bargain
 
 ### Getting Help
 
-There are active communities on [Discord](https://discord.com/invite/Mnbj6th) and [Reddit](https://reddit.com/r/perl/). For IRC the two main options are #perl on FreeNode (irc.freenode.net) and #perl-help on [irc.perl.org](https://www.irc.perl.org/). Everyone is really friendly and helpful, so don't hesitate to swing by. If you need an IRC program to connect with try [HexChat](https://hexchat.github.io/) for Linux/Windows or [LimeChat](http://limechat.net/mac/) for Mac. You can also ask a question on [StackOverflow](https://stackoverflow.com/questions/tagged/perl), or check the [Perl FAQ](https://perldoc.pl/perlfaq).
+There are active communities on [Discord](https://discord.com/invite/Mnbj6th) and [Reddit](https://reddit.com/r/perl/), but IRC is still the most popular. The two main options there are #perl on [FreeNode](https://freenode.net/) (irc.freenode.net) and #perl-help on [Perl.org](https://www.irc.perl.org/) (irc.perl.org). Everyone is really friendly and helpful, so don't hesitate to swing by. If you need an IRC program to connect with try [HexChat](https://hexchat.github.io/) for Linux/Windows or [LimeChat](http://limechat.net/mac/) for Mac. You can also ask a question on [StackOverflow](https://stackoverflow.com/questions/tagged/perl), or check the [Perl FAQ](https://perldoc.pl/perlfaq).
 
 ### Keeping Up to Date
 
