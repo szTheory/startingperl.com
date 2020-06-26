@@ -4,7 +4,7 @@
 
 ## Why Perl
 
-Why learn Perl in 2020? Unlike Ruby it's installed on pretty much any box you log in to, so you can use it like a faster and more portable version of bash scripting. Unlike Python or Go it has [great support for functional programming](https://hop.perl.plover.com/book/). Unlike JavaScript, the ecosystem is stable so you avoid framework churn. It has a proven track record of 30+ years, so you're bound to run into it somewhere. Many best-in-class tools are written in Perl, like the famous [exiftool](https://exiftool.org/). It has a strong presence in web development, system administration, and data science. It's one of the [highest paid programming languages](https://fossbytes.com/stack-overflow-highest-salary-programming-languages-2020/).
+Why learn Perl in 2020? Unlike Ruby it's installed on pretty much any box you log in to and has [blazing fast startup times](https://github.com/bdrung/startup-time), so you can use it like a faster and more portable version of bash scripting. Unlike Python or Go it has [great support for functional programming](https://hop.perl.plover.com/book/). Unlike JavaScript, the ecosystem is stable so you avoid framework churn. It has a proven track record of 30+ years, so you're bound to run into it somewhere. Many best-in-class tools are written in Perl, like the famous [exiftool](https://exiftool.org/). It has a strong presence in web development, system administration, and data science. It's one of the [highest paid programming languages](https://fossbytes.com/stack-overflow-highest-salary-programming-languages-2020/).
 
 Perl has unique security features like ["taint checking"](https://en.wikipedia.org/wiki/Taint_checking) that can prevent malicious users from executing commands in your application. Its string manipulation and regex capabilities are unparalleled, and its Unicode support is excellent. It will give you deep insight into the world of Unix, since it was made to work with command line tools and builds on the heritage of sed and AWK. If you're familiar with C style languages like C++, JavaScript, PHP, Go, or Java, the syntax will be familiar. There is a massive and growing collection of modules available on [CPAN](https://metacpan.org/). And since Perl has a deep testing culture, the signal:noise ratio is much higher than you'd find on NPM.
 
@@ -129,15 +129,16 @@ The [Perl Toolbox](https://marketplace.visualstudio.com/items?itemName=d9705996.
 
 ```bash
 cpanm Perl::Critic #Install Perl::Critic
-cpanm Perl::Critic::Freenode #Install a better linter theme
+cpanm Perl::Critic::Freenode #Install extra linter rules
 plenv rehash #Set up "shim" shortcut
 ```
 
-After running these commands, Create a `~/.perlcriticrc` file and add the following to use the improved Perl::Critic::Freenode policy theme.
+After running these commands, Create a `~/.perlcriticrc` file and add the following to use a good default set of linter rules that enforces good code without nagging over subjective styles. You can always customize the rules once you have more experience.
 
 ```.perlcriticrc
-theme = freenode
+theme = core || freenode
 severity = 1
+exclude = RegularExpressions::RequireLineBoundaryMatching RegularExpressions::RequireDotMatchAnything RegularExpressions::RequireExtendedFormatting ControlStructures::ProhibitCascadingIfElse
 ```
 
 Then open the Visual Studio Code preferences and set `perl-toolbox.lint.useProfile` to `true`. You can do this by manually editing your settings.json file, or going to Settings (`ctrl/cmd + ,`), searching for `perl-toolbox.lint.useProfile`, and clicking the check box.
