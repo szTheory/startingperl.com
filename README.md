@@ -138,7 +138,7 @@ After running these commands, Create a `~/.perlcriticrc` file and add the follow
 ```.perlcriticrc
 theme = core || freenode
 severity = 1
-exclude = RegularExpressions::RequireLineBoundaryMatching RegularExpressions::RequireDotMatchAnything RegularExpressions::RequireExtendedFormatting ControlStructures::ProhibitCascadingIfElse
+exclude = RegularExpressions::RequireLineBoundaryMatching RegularExpressions::RequireDotMatchAnything RegularExpressions::RequireExtendedFormatting ControlStructures::ProhibitCascadingIfElse ValuesAndExpressions::ProhibitMagicNumbers
 ```
 
 Then open the Visual Studio Code preferences and set `perl-toolbox.lint.useProfile` to `true`. You can do this by manually editing your settings.json file, or going to Settings (`ctrl/cmd + ,`), searching for `perl-toolbox.lint.useProfile`, and clicking the check box.
