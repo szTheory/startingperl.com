@@ -95,7 +95,7 @@ Module dependencies in Perl are managed with [Carton](https://metacpan.org/pod/C
 
 ```bash
 cpanm Carton #Install Carton
-plenv rehash #Set up "shim" shortcut
+plenv rehash #Set up binary "shim" (command line shortcut)
 carton install #Install module deps for project from the cpanfile
 ```
 
@@ -106,7 +106,7 @@ To install a Perl REPL run this command:
 ```bash
 cpanm Reply #Install Reply REPL
 cpanm Term::ReadLine::Gnu #Enable up/down arrow keys for command history
-plenv rehash #Set up "shim" shortcut
+plenv rehash #Set up binary "shim" (command line shortcut)
 reply #Enter the REPL
 ```
 
@@ -120,7 +120,7 @@ The [Perl](https://marketplace.visualstudio.com/items?itemName=richterger.perl) 
 
 ```bash
 cpanm Perl::LanguageServer #Install Perl::LanguageServer
-plenv rehash #Set up "shim" shortcut
+plenv rehash #Set up binary "shim" (command line shortcut)
 ```
 
 #### Linter/Static Analysis
@@ -130,7 +130,7 @@ The [Perl Toolbox](https://marketplace.visualstudio.com/items?itemName=d9705996.
 ```bash
 cpanm Perl::Critic #Install Perl::Critic
 cpanm Perl::Critic::Freenode #Install extra linter rules
-plenv rehash #Set up "shim" shortcut
+plenv rehash #Set up binary "shim" (command line shortcut)
 ```
 
 After running these commands, Create a `~/.perlcriticrc` file and add the following to use a default set of linter rules that enforces good code without nagging over subjective styles. You can always customize the rules once you have more experience.
@@ -153,7 +153,7 @@ The [perltidy-more](https://marketplace.visualstudio.com/items?itemName=Kaktus.p
 
 ```bash
 cpanm Perl::Tidy #Install Perl::Tidy
-plenv rehash #Set up "shim" shortcut
+plenv rehash #Set up binary "shim" (command line shortcut)
 ```
 
 ## Integrating with Third-Party Code
