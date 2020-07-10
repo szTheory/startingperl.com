@@ -133,7 +133,7 @@ cpanm Perl::Critic::Freenode #Install extra linter rules
 plenv rehash #Set up "shim" shortcut
 ```
 
-After running these commands, Create a `~/.perlcriticrc` file and add the following to use a good default set of linter rules that enforces good code without nagging over subjective styles. You can always customize the rules once you have more experience.
+After running these commands, Create a `~/.perlcriticrc` file and add the following to use a default set of linter rules that enforces good code without nagging over subjective styles. You can always customize the rules once you have more experience.
 
 ```.perlcriticrc
 theme = core || freenode
