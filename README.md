@@ -165,7 +165,7 @@ A lot of hard problems have already been solved by the Perl community. There are
 ### Equivalents from Other Languages
 
 - **Version manager** - [plenv](https://github.com/tokuhirom/plenv) - like perlenv (Python), rbenv (Ruby), or nvm (JavaScript)
-- **Dependency manager** - [Carton](https://metacpan.org/pod/Carton) - like Poetry (Python), Bundler (Ruby), or NPM (JavaScript)
+- **Dependency manager** - [Carton](https://metacpan.org/pod/Carton) - like pipenv/Poetry (Python), Bundler (Ruby), or NPM (JavaScript)
 - **Linter** - [perlcritic](https://metacpan.org/pod/perlcritic) - like Pylint (Python), Rubocop (Ruby), or ESLint (JavaScript)
 - **Formatter** - [perltidy](https://metacpan.org/pod/perltidy) - like Black (Python), Standard (Ruby), or Prettier (JavaScript)
 - **Web app interface** - [Plack](https://plackperl.org/) - like WSGI (Python), or Rack (Ruby)
