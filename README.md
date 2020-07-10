@@ -44,7 +44,7 @@ You can view the [language](https://perldoc.perl.org/perl.html), [functions](htt
 
 ### Books
 
-Perl's not on a hype cycle right now, so you can snag its best books for bargain prices. And because Perl is an incredibly stable language, they're still relevant. A lot of these books are even free online. But paper books have great information density, you can quickly look things up from their index, and they help you get away from the computer screen for a bit.
+Perl's not on a hype cycle right now, so you can snag its best books at bargain prices. And because Perl is an incredibly stable language, they're still relevant. A lot of these books are even free online. But paper books have great information density, you can quickly look things up from their index, and they help you get away from the computer screen for a bit.
 
 - [Beginning Perl](https://www.goodreads.com/book/show/13837737-beginning-perl) - A comprehensive reference and modern introduction to Perl.
 
