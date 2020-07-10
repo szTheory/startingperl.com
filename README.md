@@ -160,7 +160,7 @@ plenv rehash #Set up binary "shim" (command line shortcut)
 
 ### Finding Modules
 
-A lot of hard problems have already been solved by the Perl community. There are almost 200k Perl modules on CPAN, which is easily searchable from [metacpan](https://metacpan.org/). If you are looking for something but don't know where to start, here is a [curated list of modules](https://metacpan.org/pod/Task::Kensho).
+A lot of hard problems have already been solved by the Perl community. There are almost 200k Perl modules on CPAN, all of which are easily searchable from [metacpan](https://metacpan.org/). If you are looking for something but don't know where to start, here is a [community-curated list of modules](https://metacpan.org/pod/Task::Kensho).
 
 ### Equivalents from Other Languages
 
