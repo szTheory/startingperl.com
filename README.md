@@ -4,7 +4,7 @@
 
 ## Why Perl
 
-Why learn Perl in 2020? Unlike Ruby it's installed on almost any box you log into and [has lightning fast startup times](https://github.com/bdrung/startup-time), so you can use it like a quicker, more portable version of bash scripting. Unlike Python or Go it has [great support for functional programming](https://hop.perl.plover.com/book/). Unlike JavaScript, the ecosystem is stable so you can avoid framework churn. It has a proven track record of 30+ years, so you're bound to run into it somewhere. Many best-in-class tools are written in Perl, like the famous [exiftool](https://exiftool.org/). It has a strong presence in web development, system administration, and data science. It's one of the [highest paid programming languages](https://fossbytes.com/stack-overflow-highest-salary-programming-languages-2020/).
+Why learn Perl in 2020? Unlike Ruby it's installed on almost any box you log into and [has lightning fast startup times](https://github.com/bdrung/startup-time), so you can use it like a quicker, more portable version of bash scripting. Unlike Python or Go it has [great support for functional programming](https://hop.perl.plover.com/book/) including a filter/map/reduce and tail call optimization. Unlike JavaScript, the ecosystem is stable so you can avoid framework churn. It has a proven track record of 30+ years, so you're bound to run into it somewhere. Many best-in-class tools are written in Perl, like the famous [exiftool](https://exiftool.org/). It has a strong presence in web development, system administration, and data science. It's one of the [highest paid programming languages](https://fossbytes.com/stack-overflow-highest-salary-programming-languages-2020/).
 
 Perl has unique security features like ["taint checking"](https://en.wikipedia.org/wiki/Taint_checking) that can prevent malicious users from executing commands in your application. Its string manipulation and regex capabilities are unparalleled and it has excellent Unicode support. It will give you deep insight into the world of Unix, since it builds on the heritage of sed/AWK and was made to pipe command line programs. If you're familiar with C style languages like C++, JavaScript, PHP, Go, or Java, the syntax will be familiar. There is a massive and growing collection of modules available on [CPAN](https://metacpan.org/). And since Perl has a deep testing culture, the signal:noise ratio is much higher than you'd find on NPM.
 
@@ -52,7 +52,7 @@ Perl's not on a hype cycle right now, so you can snag its best books at bargain 
 
 - [Modern Perl, 4th edition](https://www.goodreads.com/book/show/10198038-modern-perl) - A short book to quickly bring you up to speed on modern "best practices" Perl. Also available online [for free](http://modernperlbooks.com/books/modern_perl_2016/index.html).
 
-- [Programming Perl, 4th edition](https://www.goodreads.com/book/show/154155.Programming_Perl) - The official reference. It's a massive tome and you can get it for \$10.
+- [Programming Perl, 4th edition](https://www.goodreads.com/book/show/154155.Programming_Perl) - The official reference. A massive tome that is essentially a printed version of the Perl documentation with many more examples.
 
 - [Higher Order Perl](https://www.goodreads.com/book/show/86365.Higher_Order_Perl) - A classic book on functional programming in Perl. More relevant than ever with the rise of multi-core CPUs. Also available online for [for free](https://hop.perl.plover.com/book/).
 
@@ -138,11 +138,14 @@ After running these commands, Create a `~/.perlcriticrc` file and add the follow
 ```.perlcriticrc
 theme = core || freenode
 severity = 1
-exclude = RegularExpressions::RequireLineBoundaryMatching RegularExpressions::RequireDotMatchAnything RegularExpressions::RequireExtendedFormatting ControlStructures::ProhibitCascadingIfElse ValuesAndExpressions::ProhibitMagicNumbers ControlStructures::ProhibitUnlessBlocks ControlStructures::ProhibitPostfixControls
+exclude = RegularExpressions::RequireLineBoundaryMatching RegularExpressions::RequireDotMatchAnything RegularExpressions::RequireExtendedFormatting ControlStructures::ProhibitCascadingIfElse ValuesAndExpressions::ProhibitMagicNumbers ControlStructures::ProhibitUnlessBlocks ControlStructures::ProhibitPostfixControls ValuesAndExpressions::ProhibitConstantPragma RegularExpressions::ProhibitEscapedMetacharacters Variables::ProhibitPunctuationVars ErrorHandling::RequireCarping
 
 [InputOutput::RequireCheckedSyscalls]
 functions = :builtins
 exclude_functions = print
+
+[InputOutput::ProhibitBacktickOperators]
+only_in_void_context = 1
 ```
 
 Then open the Visual Studio Code preferences and set `perl-toolbox.lint.useProfile` to `true`. You can do this by manually editing your settings.json file, or going to Settings (`ctrl/cmd + ,`), searching for `perl-toolbox.lint.useProfile`, and clicking the check box.
@@ -154,6 +157,12 @@ The [perltidy-more](https://marketplace.visualstudio.com/items?itemName=Kaktus.p
 ```bash
 cpanm Perl::Tidy #Install Perl::Tidy
 plenv rehash #Set up binary "shim" (command line shortcut)
+```
+
+Formatting options are controlled by a `~/.perltidyrc` file. Here's a good starting default:
+
+```.perltidyrc
+-i=2 #indent with 2 spaces instead of 4
 ```
 
 ## Integrating with Third-Party Code
