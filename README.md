@@ -138,7 +138,7 @@ After running these commands, Create a `~/.perlcriticrc` file and add the follow
 ```.perlcriticrc
 theme = core || freenode
 severity = 1
-exclude = RegularExpressions::RequireLineBoundaryMatching RegularExpressions::RequireDotMatchAnything RegularExpressions::RequireExtendedFormatting ControlStructures::ProhibitCascadingIfElse ValuesAndExpressions::ProhibitMagicNumbers ControlStructures::ProhibitUnlessBlocks ControlStructures::ProhibitPostfixControls ValuesAndExpressions::ProhibitConstantPragma RegularExpressions::ProhibitEscapedMetacharacters Variables::ProhibitPunctuationVars ErrorHandling::RequireCarping
+exclude = RegularExpressions::RequireLineBoundaryMatching RegularExpressions::RequireDotMatchAnything RegularExpressions::RequireExtendedFormatting ControlStructures::ProhibitCascadingIfElse ValuesAndExpressions::ProhibitMagicNumbers ControlStructures::ProhibitUnlessBlocks ControlStructures::ProhibitPostfixControls ValuesAndExpressions::ProhibitConstantPragma RegularExpressions::ProhibitEscapedMetacharacters Variables::ProhibitPunctuationVars ErrorHandling::RequireCarping ValuesAndExpressions::ProhibitEmptyQuotes CodeLayout::RequireTrailingCommas
 
 [InputOutput::RequireCheckedSyscalls]
 functions = :builtins
