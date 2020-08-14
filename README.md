@@ -58,6 +58,8 @@ Perl's not on a hype cycle right now, so you can snag its best books at bargain 
 
 - [Mastering Perl, 2nd edition](https://www.goodreads.com/book/show/583634.Mastering_Perl) - Advanced techniques for the working Perl programmer, like secure programming, debugging, profiling, benchmarking, configuration, logging, and error reporting.
 
+- [Advanced Perl Programming, 1st edition](https://www.goodreads.com/book/show/583608.Advanced_Perl_Programming) - Full of sage insight into advanced Perl topics and internals. Get the 1st edition. The 2nd edition is a totally different book and doesn't cover the same information.
+
 ### Getting Help
 
 There are active communities on [Discord](https://discord.com/invite/Mnbj6th) and [Reddit](https://reddit.com/r/perl/), but IRC is still the most popular. The two main options there are #perl on [FreeNode](https://freenode.net/) (irc.freenode.net) and #perl-help on [Perl.org](https://www.irc.perl.org/) (irc.perl.org). Everyone is really friendly and helpful, so don't hesitate to swing by. If you need an IRC program to connect with try [HexChat](https://hexchat.github.io/) for Linux/Windows or [LimeChat](http://limechat.net/mac/) for Mac. You can also ask a question on [StackOverflow](https://stackoverflow.com/questions/tagged/perl), or check the [Perl FAQ](https://perldoc.pl/perlfaq).
