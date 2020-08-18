@@ -101,6 +101,27 @@ plenv rehash #Set up binary "shim" (command line shortcut)
 carton install #Install module deps for project from the cpanfile
 ```
 
+Then when you have a script that uses a Carton installed package (for example `use JSON::MaybeXS;`), run it with `perl -Ilocal/lib/perl5` or the shorcut `carton exec perl` and it will link up to the package install path:
+
+```bash
+perl -Ilocal/lib/perl5 myscript.pl #the long way
+carton exec perl myscript.pl #the short way
+```
+
+You might want to alias `carton exec` in your `~/.bash_profile` or `~/.zshrc`
+
+```bash
+alias ce="carton exec" 
+alias cep="carton exec perl"
+```
+
+Then you can do one of
+
+```bash
+ce perl myscript.pl
+cep myscript.pl
+```
+
 ### REPL
 
 To install a Perl REPL run this command:
@@ -165,6 +186,16 @@ Formatting options are controlled by a `~/.perltidyrc` file. Here's a good start
 
 ```.perltidyrc
 -i=2 #indent with 2 spaces instead of 4
+```
+
+#### Mojolicious Templates
+
+If you're using `Mojo::Template` then install [the official Mojolicious Templates extension](https://docs.mojolicious.org/Mojo/Template), made by the creator of Mojlicious. It adds syntax highlighting for the templates, even when they are embedded directly into Perl code. To make sure HTML emmet snippets also work within Mojolicious templates, add the following to your `settings.json` file:
+
+```json
+"emmet.includeLanguages": {
+  "mojolicious": "html"
+}
 ```
 
 ## Integrating with Third-Party Code
