@@ -4,9 +4,9 @@
 
 ## Why Perl
 
-Why learn Perl in 2020? Unlike Ruby and Python3 it's installed on any almost any box you SSH into. So with its [famously quick startup time](https://github.com/bdrung/startup-time) you can use Perl like a faster, more robust and portable bash script. Unlike Python and Go it has [great support for functional programming](https://hop.perl.plover.com/book/), including filter/map/reduce and tail call optimization. Unlike JavaScript, the ecosystem is stable so you avoid constant framework churn. Unlike [Python](https://learning-python.com/python-changes-2014-plus.html), avoiding breaking changes is top priority for Perl. It has a proven track record of 30+ years, so you're bound to run into it somewhere. Many best-in-class tools are written in Perl, like the famous [exiftool](https://exiftool.org/). It has a strong presence in web development, system administration, and [data science](https://bioperl.org/). It's one of the [highest paid programming languages](https://fossbytes.com/stack-overflow-highest-salary-programming-languages-2020/).
+Why learn Perl in 2020? Every tool has trade-offs, Perl has many outstanding qualities you won't find elsewhere. Unlike Ruby and Python3, it's installed on almost any box you SSH into, like the Vim of programming languages. Because of this and its [famously quick startup time](https://github.com/bdrung/startup-time), you can use Perl like a faster, more portable and robust Bash script. Unlike Python and Go it has [great support for functional programming](https://hop.perl.plover.com/book/), including filter/map/reduce and tail call optimization. Unlike [JavaScript](https://www.madetech.com/blog/javascript-fatigue/), the ecosystem is stable so you avoid constant framework churn. Unlike [Python](https://learning-python.com/python-changes-2014-plus.html), avoiding breaking changes is top priority for Perl. It has a proven track record of 30+ years, so you're bound to run into it somewhere. Many best-in-class tools are written in Perl such as the famous [exiftool](https://exiftool.org/). It has a strong presence in web development, system administration, and [data science](https://bioperl.org/). It's one of the [highest paid programming languages](https://fossbytes.com/stack-overflow-highest-salary-programming-languages-2020/).
 
-Perl has unique security features like ["taint checking"](https://en.wikipedia.org/wiki/Taint_checking) that can prevent malicious users from executing commands in your application. Its string manipulation and regex capabilities are unparalleled and it has excellent Unicode support. It will give you deep insight into the world of Unix, since it builds on the heritage of sed/AWK and was made to pipe command line programs. If you're familiar with C style languages like C++, JavaScript, PHP, Go, or Java, the syntax will be familiar. There is a massive and growing collection of modules available on [CPAN](https://metacpan.org/). And since Perl has a deep testing culture, the signal:noise ratio is much higher than you'd find on NPM.
+Perl has unique security features like ["taint checking"](https://en.wikipedia.org/wiki/Taint_checking) that can prevent malicious users from executing commands in your application. Its string manipulation and regex capabilities are unparalleled and it has excellent Unicode support. Perl will give you deep insight into the world of Unix since it builds on the heritage of sed/AWK and was made to pipe command line programs. If you're familiar with C style languages like C++, JavaScript, PHP, Go, or Java, the syntax will be familiar. There is a massive and still growing collection of packages available on [CPAN](https://metacpan.org/), each with its documentation and list of dependencies uniformly laid out front and center. Combined with CPAN's deep testing culture, you get the highest signal:noise package ecosystem of any scripting language.
 
 ## Table of Contents
 
@@ -133,6 +133,14 @@ plenv rehash #Set up binary "shim" (command line shortcut)
 reply #Enter the REPL
 ```
 
+To launch Reply with your Carton dependencies loaded:
+
+```bash
+carton exec reply
+```
+
+Then you can include packages you want to use from the REPL with `use My::Dependency::Name;` and they will work without issue.
+
 ### IDE
 
 [Visual Studio Code](https://code.visualstudio.com/) makes for a great modern Perl IDE. Here are the main extensions that will make your life easier.
@@ -161,7 +169,7 @@ After running these commands, Create a `~/.perlcriticrc` file and add the follow
 ```.perlcriticrc
 theme = core || freenode
 severity = 1
-exclude = RegularExpressions::RequireLineBoundaryMatching RegularExpressions::RequireDotMatchAnything RegularExpressions::RequireExtendedFormatting ControlStructures::ProhibitCascadingIfElse ValuesAndExpressions::ProhibitMagicNumbers ControlStructures::ProhibitUnlessBlocks ControlStructures::ProhibitPostfixControls ValuesAndExpressions::ProhibitConstantPragma RegularExpressions::ProhibitEscapedMetacharacters Variables::ProhibitPunctuationVars ErrorHandling::RequireCarping ValuesAndExpressions::ProhibitEmptyQuotes CodeLayout::RequireTrailingCommas CodeLayout::ProhibitParensWithBuiltins
+exclude = RegularExpressions::RequireLineBoundaryMatching RegularExpressions::RequireDotMatchAnything RegularExpressions::RequireExtendedFormatting ControlStructures::ProhibitCascadingIfElse ValuesAndExpressions::ProhibitMagicNumbers ControlStructures::ProhibitUnlessBlocks ControlStructures::ProhibitPostfixControls ValuesAndExpressions::ProhibitConstantPragma RegularExpressions::ProhibitEscapedMetacharacters Variables::ProhibitPunctuationVars ErrorHandling::RequireCarping ValuesAndExpressions::ProhibitEmptyQuotes CodeLayout::RequireTrailingCommas CodeLayout::ProhibitParensWithBuiltins ValuesAndExpressions::RequireInterpolationOfMetachars
 
 [InputOutput::RequireCheckedSyscalls]
 functions = :builtins
@@ -217,4 +225,5 @@ A lot of hard problems have already been solved by the Perl community. There are
 - **ORM (Active Record pattern)** - [DBIx::Class](https://metacpan.org/pod/DBIx::Class) - like ActiveRecord (Ruby), Django ORM (Python)
 - **Templating** - [Mojo::Template](https://docs.mojolicious.org/Mojo/Template) and [Template::Toolkit](http://template-toolkit.org/) - like erb (Ruby), Django templates (Python), Mustache/Handlbards (JavaScript)
 - **Web Scraping** - [WWW::Mechanize](https://metacpan.org/pod/WWW::Mechanize) - like Mechanize (Ruby), mechanize (Python)
+- **DOM Parsing** - [Mojo::DOM](https://docs.mojolicious.org/Mojo/DOM) - like Nokogiri (Ruby), Beautiful Soup (Python)
 - **Browser Automation** - [WWW::Selenium](https://metacpan.org/pod/WWW::Selenium) - Like WebDriver (Ruby), Selenium (Python), Nightwatch.js (JavaScript), Nightwatch.js/Puppeteer (JavaScript)
