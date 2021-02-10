@@ -75,23 +75,24 @@ There are active communities on [Discord](https://discord.com/invite/Mnbj6th) an
 
 ### Perl Version Manager
 
-[plenv](https://github.com/tokuhirom/plenv) let's you have multiple Perl versions installed at once and keep their CPAN modules separate. This way you can use a different Perl for different projects without them interfering with each other or the system installed `perl`. It's equivalent to Python's pyenv, Ruby's rbenv, or Node's nvm. Simply [follow the instructions here](https://github.com/tokuhirom/plenv#installation) to install plenv, then run the following commands to install Perl:
+[asdf](https://asdf-vm.com/) let's you have multiple Perl versions installed at once and keep their CPAN modules separate. This way you can use a different Perl for different projects without them interfering with each other or the system installed `perl`. It also works with other programming languages, so you can use the same version manager for Node, Ruby, Python, Go, Rust, etc. Simply [follow the instructions here](https://asdf-vm.com/#/core-manage-asdf?id=install) to install asdf, then run the following commands to install Perl:
 
 ```bash
-plenv install --list #List available versions
-plenv install 5.32.0 #Install latest version
-plenv global 5.32.0 #Use as default Perl
+asdf plugin add perl https://github.com/ouest/asdf-perl.git #Install Perl plugin for asdf
+asdf install perl 5.32.1 #Install latest Perl version at time of writing
+asdf global perl 5.32.1 #Use as default Perl
 perl --version #Confirm latest version is installed properly
 ```
 
-If the latest Perl version does not show up, double-check the plenv install instructions and make sure you've run `source ~/.bash_profile` or `source ~/.zshrc`
+If the latest Perl version does not show up, double-check the asdf install instructions and make sure you've run `source ~/.bash_profile` or `source ~/.zshrc`
 
 ### Module Installer
 
 You can install Perl modules with [cpanminus](https://github.com/miyagawa/cpanminus). This lets you run `cpanm modulenamehere` to quickly install any module from CPAN. To set it up run:
 
 ```bash
-plenv install-cpanm #Install cpanm
+curl -L https://cpanmin.us > cpanm_setup.pl #Download cpanm setup script
+perl cpanm_setup.pl App::cpanminus #Run cpanm setup state
 ```
 
 ### Dependencies Manager
@@ -100,7 +101,7 @@ Module dependencies in Perl are managed with [Carton](https://metacpan.org/pod/C
 
 ```bash
 cpanm Carton #Install Carton
-plenv rehash #Set up binary "shim" (command line shortcut)
+asdf reshim perl #Set up binary "shim" (command line shortcut)
 carton install #Install module deps for project from the cpanfile
 ```
 
@@ -132,7 +133,7 @@ To install a Perl REPL run this command:
 ```bash
 cpanm Reply #Install Reply REPL
 cpanm Term::ReadLine::Gnu #Enable up/down arrow keys for command history
-plenv rehash #Set up binary "shim" (command line shortcut)
+asdf reshim perl #Set up binary "shim" (command line shortcut)
 reply #Enter the REPL
 ```
 
@@ -154,7 +155,7 @@ The [Perl](https://marketplace.visualstudio.com/items?itemName=richterger.perl) 
 
 ```bash
 cpanm Perl::LanguageServer #Install Perl::LanguageServer
-plenv rehash #Set up binary "shim" (command line shortcut)
+asdf reshim perl #Set up binary "shim" (command line shortcut)
 ```
 
 #### Linter/Static Analysis
