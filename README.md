@@ -8,6 +8,9 @@ Why learn Perl in 2020? It has many outstanding qualities you won't find elsewhe
 
 Perl has unique security features like ["taint checking"](https://en.wikipedia.org/wiki/Taint_checking) that can prevent malicious users from executing commands in your application. Its string manipulation and regex capabilities are unparalleled and it has excellent Unicode support. Perl will give you deep insight into the world of Unix since it builds on the heritage of sed/AWK and was made to pipe command line programs. If you're familiar with C style languages like C++, JavaScript, PHP, Go, or Java, the syntax will be familiar. There is a massive and still growing collection of packages available on [CPAN](https://metacpan.org/), each with its documentation and list of dependencies uniformly laid out front and center. Combined with CPAN's [deep testing culture](https://qa.perl.org/cpan-testers/), you get the highest signal:noise package ecosystem of any scripting language.
 
+>"Perl is, in intent, a cleaned up and summarized version of that wonderful semi-natural language known as 'Unix'."
+– Larry Wall, creator of Perl
+
 ## Table of Contents
 
 - [Learning Perl](#learning-perl)
