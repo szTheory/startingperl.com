@@ -164,7 +164,7 @@ The [Perl Toolbox](https://marketplace.visualstudio.com/items?itemName=d9705996.
 ```bash
 cpanm Perl::Critic #Install Perl::Critic
 cpanm Perl::Critic::Freenode #Install extra linter rules
-plenv rehash #Set up binary "shim" (command line shortcut)
+asdf reshim perl #Set up binary "shim" (command line shortcut)
 ```
 
 After running these commands, Create a `~/.perlcriticrc` file and add the following to use a default set of linter rules that enforces good code without nagging over subjective styles. You can always customize the rules once you have more experience.
@@ -190,7 +190,7 @@ The [perltidy-more](https://marketplace.visualstudio.com/items?itemName=Kaktus.p
 
 ```bash
 cpanm Perl::Tidy #Install Perl::Tidy
-plenv rehash #Set up binary "shim" (command line shortcut)
+asdf reshim perl #Set up binary "shim" (command line shortcut)
 ```
 
 Formatting options are controlled by a `~/.perltidyrc` file. Here's a good starting default:
@@ -217,7 +217,6 @@ A lot of hard problems have already been solved by the Perl community. There are
 
 ### Equivalents from Other Languages
 
-- **Version manager** - [plenv](https://github.com/tokuhirom/plenv) - like perlenv (Python), rbenv (Ruby), or nvm (JavaScript)
 - **Dependency manager** - [Carton](https://metacpan.org/pod/Carton) - like pipenv/Poetry (Python), Bundler (Ruby), or NPM (JavaScript)
 - **Linter** - [perlcritic](https://metacpan.org/pod/perlcritic) - like Pylint (Python), Rubocop (Ruby), or ESLint (JavaScript)
 - **Formatter** - [perltidy](https://metacpan.org/pod/perltidy) - like Black (Python), Standard (Ruby), or Prettier (JavaScript)
