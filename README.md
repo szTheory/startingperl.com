@@ -227,7 +227,7 @@ A lot of hard problems have already been solved by the Perl community. There are
 - **MVC web framework** - [Catalyst](http://www.catalystframework.org/) - like Django (Python), Rails (Ruby), or Nest (JavaScript)
 - **ORM (Active Record pattern)** - [DBIx::Class](https://metacpan.org/pod/DBIx::Class) - like ActiveRecord (Ruby), Django ORM (Python)
 - **Templating** - [Mojo::Template](https://docs.mojolicious.org/Mojo/Template) and [Template::Toolkit](http://template-toolkit.org/) - like erb (Ruby), Django templates (Python), Mustache/Handlbards (JavaScript)
-- **Web Scraping** - [WWW::Mechanize](https://metacpan.org/pod/WWW::Mechanize) - like Mechanize (Ruby), MechanicalSoup (Python), Puppeteer (JavaScript)
+- **Web Scraping** - [Mojo::UserAgent](https://docs.mojolicious.org/Mojo/UserAgent), [WWW::Mechanize](https://metacpan.org/pod/WWW::Mechanize) - like Mechanize (Ruby), MechanicalSoup (Python), Puppeteer (JavaScript)
 - **DOM Parsing** - [Mojo::DOM](https://docs.mojolicious.org/Mojo/DOM) - like Nokogiri (Ruby), Beautiful Soup (Python)
 - **Browser Automation** - [WWW::Selenium](https://metacpan.org/pod/WWW::Selenium) - Like WebDriver (Ruby), Selenium (Python), Nightwatch.js (JavaScript), Nightwatch.js/Puppeteer (JavaScript)
 - **Minify JavaScript** - [JavaScript::Packer](https://metacpan.org/pod/JavaScript::Packer) - Like Uglifier (Ruby), jsmin (Python), minify (JavaScript)
