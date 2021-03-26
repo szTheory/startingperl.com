@@ -8,8 +8,8 @@ Why learn Perl in 2021? It has many outstanding qualities you won't find elsewhe
 
 Perl has unique security features like ["taint checking"](https://en.wikipedia.org/wiki/Taint_checking) that can prevent malicious users from executing commands in your application. Its string manipulation and regex capabilities are unparalleled and it has excellent Unicode support. Perl will give you deep insight into the world of Unix since it builds on the heritage of sed/AWK and was made to pipe command line programs. If you're familiar with C style languages like C++, JavaScript, PHP, Go, or Java, the syntax will be familiar. There is a massive and still growing collection of packages available on [CPAN](https://metacpan.org/), each with its documentation and list of dependencies uniformly laid out front and center. Combined with CPAN's [deep testing culture](https://qa.perl.org/cpan-testers/), you get the highest signal:noise package ecosystem of any scripting language.
 
->"Perl is, in intent, a cleaned up and summarized version of that wonderful semi-natural language known as 'Unix'."
-– Larry Wall, creator of Perl
+> "Perl is, in intent, a cleaned up and summarized version of that wonderful semi-natural language known as 'Unix'."
+> – Larry Wall, creator of Perl
 
 ## Table of Contents
 
@@ -115,7 +115,7 @@ carton exec perl myscript.pl #the short way
 You might want to alias `carton exec` in your `~/.bash_profile` or `~/.zshrc`
 
 ```bash
-alias ce="carton exec" 
+alias ce="carton exec"
 alias cep="carton exec perl"
 ```
 
@@ -200,6 +200,63 @@ Formatting options are controlled by a `~/.perltidyrc` file. Here's a good start
 -i=2 #indent with 2 spaces instead of 4
 ```
 
+#### Debugging
+
+Perl comes with a built-in debugger that is like Ruby's Pry or Byebug. To set a breakpoint in your code just add this line anywhere in your program:
+
+```perl
+$DB::single = 1;
+```
+
+Then run your program with the `-d` flag like so:
+
+```perl
+perl -d myprogram.pl
+```
+
+That will boot you into a prompt and immediately stop execution. Press `c` to continue execution to the breakpoint you set. Then print variables with `p` or `x` for more detail, like so:
+
+```perl
+DB<3> p $link_regex;
+(https://haxe.io/roundups/\d+/)
+
+DB<4> x $newsletter_entry;
+0  HASH(0x7fafef8cd0b0)
+   'category' => 'Programming Languages'
+   'feed_url' => 'https://blog.skialbainn.com/rss'
+   'link_regex' => '(https://haxe.io/roundups/\\d+/)'
+   'link_selector' => '//item/description'
+   'name' => 'Haxe Roundup'
+   'updated_selector' => '//item/pubDate'
+   'url' => 'https://haxe.io/'
+```
+
+Cheatsheet of common commands:
+
+##### Execution
+
+- `c` - continue execution
+- `n` - step execution to the next line
+- `s` - step into the next executable statement including subroutines
+- `r` - run through the current subroutine and stop on the return statement
+
+###### Printing
+
+- `p` - print out a variable
+- `x` - print a detailed inspection of a variable
+- `v` - see the current line you're on with code surrounding it for context
+- `T` - print the current stacktrace
+
+###### Other
+
+- `h` - help listing of commands
+- `q` - quit the debugger.
+
+There are two books on Perl debugging that you can get for about $5 or $10 each.
+
+- [Perl Debugger Procket Reference](https://www.goodreads.com/book/show/1036840.Perl_Debugger_Pocket_Reference)
+- [Pro Perl Debugging](https://www.goodreads.com/book/show/605612.Pro_Perl_Debugging)
+
 #### Mojolicious Templates
 
 If you're using `Mojo::Template` then install [the official Mojolicious Templates extension](https://docs.mojolicious.org/Mojo/Template), made by the creator of Mojlicious. It adds syntax highlighting for the templates, even when they are embedded directly into Perl code. To make sure HTML emmet snippets also work within Mojolicious templates, add the following to your `settings.json` file:
@@ -221,6 +278,7 @@ A lot of hard problems have already been solved by the Perl community. There are
 - **Dependency manager** - [Carton](https://metacpan.org/pod/Carton) - like pipenv/Poetry (Python), Bundler (Ruby), or NPM (JavaScript)
 - **Linter** - [perlcritic](https://metacpan.org/pod/perlcritic) - like Pylint (Python), Rubocop (Ruby), or ESLint (JavaScript)
 - **Formatter** - [perltidy](https://metacpan.org/pod/perltidy) - like Black (Python), Standard (Ruby), or Prettier (JavaScript)
+- **Debugger** - [perldebug](https://perldoc.perl.org/perldebug) - like Pry or Byebug (Ruby)
 - **Web app interface** - [Plack](https://plackperl.org/) - like WSGI (Python), or Rack (Ruby)
 - **Lightweight web framework** - [Dancer](http://perldancer.org/) - like Flask (Python), Sinatra (Ruby), or Express (JavaScript)
 - **Real-time web framework** - [Mojolicious](https://mojolicious.org/) - like Twisted (Python)
