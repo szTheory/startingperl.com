@@ -25,6 +25,11 @@ Perl has unique security features like ["taint checking"](https://en.wikipedia.o
   - [Dependencies Manager](#dependencies-manager)
   - [REPL](#repl)
   - [IDE](#ide)
+  - [Language Server](#language-server)
+  - [Linter/Static Analysis](#linter/static-analysis)
+  - [Code Formatter](#code-formatter)
+  - [Debugger](#debugger)
+  - [Syntax Highlighting for Mojolicious Templates](#syntax-highlighting-for-mojolicious-templates)
 - [Integrating with Third-Party Code](#integrating-with-third-party-code)
   - [Finding Modules](#finding-modules)
   - [Equivalents from Other Languages](#equivalents-from-other-languages)
@@ -200,7 +205,7 @@ Formatting options are controlled by a `~/.perltidyrc` file. Here's a good start
 -i=2 #indent with 2 spaces instead of 4
 ```
 
-#### Debugging
+#### Debugger
 
 Perl comes with a built-in debugger that is like Ruby's Pry or Byebug. To set a breakpoint in your code just add this line anywhere in your program:
 
@@ -257,7 +262,7 @@ There are two books on Perl debugging that you can get for about $5 or $10 each.
 - [Perl Debugger Procket Reference](https://www.goodreads.com/book/show/1036840.Perl_Debugger_Pocket_Reference)
 - [Pro Perl Debugging](https://www.goodreads.com/book/show/605612.Pro_Perl_Debugging)
 
-#### Mojolicious Templates
+#### Syntax Highlighting for Mojolicious Templates
 
 If you're using `Mojo::Template` then install [the official Mojolicious Templates extension](https://docs.mojolicious.org/Mojo/Template), made by the creator of Mojlicious. It adds syntax highlighting for the templates, even when they are embedded directly into Perl code. To make sure HTML emmet snippets also work within Mojolicious templates, add the following to your `settings.json` file:
 
