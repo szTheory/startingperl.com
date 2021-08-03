@@ -264,7 +264,7 @@ There are two books on Perl debugging that you can get for about $5 or $10 each.
 
 #### Syntax Highlighting for Mojolicious Templates
 
-If you're using `Mojo::Template` then install [the official Mojolicious Templates extension](https://docs.mojolicious.org/Mojo/Template), made by the creator of Mojlicious. It adds syntax highlighting for the templates, even when they are embedded directly into Perl code. To make sure HTML emmet snippets also work within Mojolicious templates, add the following to your `settings.json` file:
+If you're using `Mojo::Template` then install [the official Mojolicious Templates extension](https://marketplace.visualstudio.com/items?itemName=kraih.mojolicious), made by the creator of Mojlicious. It adds syntax highlighting for the templates, even when they are embedded directly into Perl code. To make sure HTML emmet snippets also work within Mojolicious templates, add the following to your `settings.json` file:
 
 ```json
 "emmet.includeLanguages": {
