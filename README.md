@@ -259,7 +259,7 @@ Cheatsheet of common commands:
 
 There are two books on Perl debugging that you can get for about $5 or $10 each.
 
-- [Perl Debugger Procket Reference](https://www.goodreads.com/book/show/1036840.Perl_Debugger_Pocket_Reference)
+- [Perl Debugger Pocket Reference](https://www.goodreads.com/book/show/1036840.Perl_Debugger_Pocket_Reference)
 - [Pro Perl Debugging](https://www.goodreads.com/book/show/605612.Pro_Perl_Debugging)
 
 #### Syntax Highlighting for Mojolicious Templates
