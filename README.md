@@ -247,8 +247,8 @@ Cheatsheet of common commands:
 
 ###### Printing
 
-- `p` - print out a variable
 - `x` - print a detailed inspection of a variable
+- `p` - print out a variable (hides empty values, unlike `x`)
 - `v` - see the current line you're on with code surrounding it for context
 - `T` - print the current stacktrace
 
