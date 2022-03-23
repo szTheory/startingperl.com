@@ -207,9 +207,10 @@ Formatting options are controlled by a `~/.perltidyrc` file. Here's a good start
 
 #### Debugger
 
-Perl comes with a built-in debugger that is like Ruby's Pry or Byebug. NOTE: To get up/down arrows working for command history in the REPL, you must install Readline support:
+Perl comes with a built-in debugger that is like Ruby's Pry or Byebug. NOTE: To get up/down arrows working for command history in the debugger, you must install Readline support. You'll also want to install Reply which cleans up the debugger with syntax highlighting and other nice features.
 
 ```bash
+cpanm Reply #Install Reply REPL
 cpanm Term::ReadLine::Gnu #Enable up/down arrow keys for command history
 asdf reshim perl #Set up binary "shim" (command line shortcut)
 ```
