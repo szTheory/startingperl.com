@@ -207,7 +207,14 @@ Formatting options are controlled by a `~/.perltidyrc` file. Here's a good start
 
 #### Debugger
 
-Perl comes with a built-in debugger that is like Ruby's Pry or Byebug. To set a breakpoint in your code just add this line anywhere in your program:
+Perl comes with a built-in debugger that is like Ruby's Pry or Byebug. NOTE: To get up/down arrows working for command history in the REPL, you must install Readline support:
+
+```bash
+cpanm Term::ReadLine::Gnu #Enable up/down arrow keys for command history
+asdf reshim perl #Set up binary "shim" (command line shortcut)
+```
+
+To set a breakpoint in your code just add this line anywhere in your program:
 
 ```perl
 $DB::single = 1;
